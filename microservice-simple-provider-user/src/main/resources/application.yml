@@ -1,0 +1,19 @@
+server:
+  port: 8001
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://182.92.83.216:3306/test2?useSSL=false&useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+    username: test
+    password: Test@123
+  jpa:
+    show-sql: true
+logging:
+  level:
+    root: INFO
+    # 配置日志级别，让hibernate打印出执行的SQL参数
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+
+
