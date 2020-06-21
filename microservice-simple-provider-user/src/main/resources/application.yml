@@ -8,12 +8,31 @@ spring:
     password: Test@123
   jpa:
     show-sql: true
+  application:
+    name: microservice-simple-provider-user
 logging:
   level:
     root: INFO
-    # ������־������hibernate��ӡ��ִ�е�SQL����
+    #配置日志级别，让 hibernate 打印出SQL参数
     org.hibernate: INFO
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
 
+#监控
+management:
+  endpoint:
+    health:
+      show-details: always
+    beans:
+      enabled: on
+  endpoints:
+    web:
+      exposure:
+        # 暴露 metrics 节点，如果需要暴露多个节点，用 , 分离，如果暴露所有节点，用 '*'
+        include: metrics
+# 注册
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
 
