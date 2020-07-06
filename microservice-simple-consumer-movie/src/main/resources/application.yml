@@ -7,3 +7,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+#指定负载策略为随机调用
+user.service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

@@ -7,16 +7,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class MicroserviceSimpleConsumerMovieApplication {
+public class MicroserviceSimpleConsumerMovie2Application {
 
-    @Bean
-    @LoadBalanced
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
-
-    public static void main(String[] args) {
-        SpringApplication.run(MicroserviceSimpleConsumerMovieApplication.class, args);
-    }
+	@Bean
+	@LoadBalanced
+	public RestTemplate restTemplate(){
+		return new RestTemplate();
+	}
+	public static void main(String[] args) {
+		SpringApplication.run(MicroserviceSimpleConsumerMovie2Application.class, args);
+	}
 
 }

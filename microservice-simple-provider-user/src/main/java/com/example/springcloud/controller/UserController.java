@@ -21,7 +21,7 @@ public class UserController {
 
     @GetMapping("/{id}")
     public Optional<User> findById(@PathVariable Long id){
-        log.info("");
+        log.info("User微服务1,端口8001");
         return userRepository.findById(id);
     }
 }
